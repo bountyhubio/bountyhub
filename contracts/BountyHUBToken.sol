@@ -11,16 +11,11 @@ import "./ownership/Ownable.sol";
  * `TRC20` functions.
  */
 contract BountyHUBToken is TRC20Capped, TRC20Detailed, Ownable {
-    string private constant NAME = "BountyHUB Token";
-    string private constant SYMBOL = "BHT";
-    uint8 private constant DECIMALS = 18;
-    uint256 private constant CAP = 1000000000 * (10 ** uint256(DECIMALS));
-
     /**
      * @dev Constructor that gives msg.sender all of existing tokens.
      */
-    constructor () public
-        TRC20Detailed(NAME, SYMBOL, DECIMALS)
-        TRC20Capped(CAP) {
+    constructor (string name, string symbol, uint8 decimals, uint256 cap) public
+        TRC20Detailed(name, symbol, decimals)
+        TRC20Capped(cap * (10 ** uint256(decimals))) {
     }
 }

@@ -69,9 +69,16 @@ contract TokenTimelock is Ownable {
     }
 
     /**
+     * @return current time
+     */
+    function getBlockTimestamp() public view returns (uint256) {
+      return block.timestamp;
+    }
+
+    /**
      * @notice Transfers tokens held by timelock to beneficiary.
      */
-    function release() public {
+    function release() public onlyOwner {
         // solhint-disable-next-line not-rely-on-time
         require(block.timestamp >= _startTime, "TokenTimelock: current time is before release time");
 
@@ -80,6 +87,7 @@ contract TokenTimelock is Ownable {
 
         if (_calendar.length == 0 || block.timestamp > _calendar[0]) {
             _token.transfer(_beneficiary, amount);
+            _calendar.length = 0;
         } else {
             uint256 i = 0;
             while (block.timestamp > _calendar[_calendar.length - 1]) {
