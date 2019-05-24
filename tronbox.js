@@ -1,5 +1,15 @@
 module.exports = {
   networks: {
+    mainnet: {
+      from: process.env.TRONBOX_FROM,
+      privateKey: process.env.TRONBOX_PRIVATE_KEY,
+      consume_user_resource_percent: 30,
+      fee_limit: 100000000,
+      fullNode: "https://api.trongrid.io",
+      solidityNode: "https://api.trongrid.io",
+      eventServer: "https://api.trongrid.io",
+      network_id: "*" // Match any network id
+    },
     development: {
       from: process.env.TRONBOX_FROM,
       privateKey: process.env.TRONBOX_PRIVATE_KEY,
@@ -12,7 +22,7 @@ module.exports = {
     },
     localhost: {
       privateKey: process.env.TRONBOX_PRIVATE_KEY,
-      consume_user_resource_percent: 30,      
+      consume_user_resource_percent: 30,
       fullNode: "http://127.0.0.1:9090",
       solidityNode: "http://127.0.0.1:9090",
       eventServer: "http://127.0.0.1:9090",

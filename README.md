@@ -22,6 +22,104 @@
 * _Ecosystem_            : 18 %
 * _Platform Rewards_     : 35 %
 
+## Deployment
+
+```
+  ==================================================================================
+  Deployment summary:
+  ==================================================================================
+
+  Team:
+  --------------------------------------------------------------
+    Timelock address: 418e67532a5a6183d4e9f87287792853d6e4cf07f4 (100000000 BHT)
+       Token address: 41cca17a317333b8e610ca0333f03bfc0623d2c233
+       Owner address: 416f59de1f638087c640a424d41022da79e852a75e
+        Fund address: 41f86599b68421fe90649a67a90ca72064e71bf309
+    Vesting period [ISO 8601]: not started yet
+    --------------------------
+
+
+  Foundation:
+  --------------------------------------------------------------
+    Timelock address: 417e63e963231eb79d2bb6711b7e65cfa00c2aeff4 (150000000 BHT)
+       Token address: 41cca17a317333b8e610ca0333f03bfc0623d2c233
+       Owner address: 416f59de1f638087c640a424d41022da79e852a75e
+        Fund address: 41caa6bb3efe024f699b405d238cdcbe8f98b554fd
+    Vesting period [ISO 8601]: not started yet
+    --------------------------
+
+
+  Funds/Pools:
+  ------------------------------------------------------------------
+    Platform Launch:      4114cc79e54e7783dc6517d77d41e39366fa8a1306 (10000000 BHT)
+    Marketing & Airdrops: 41ffd77cf038fbea2fb654366afacf46c296191121 (40000000 BHT)
+    Team:                 41f86599b68421fe90649a67a90ca72064e71bf309 (0 BHT)
+    Foundation:           41caa6bb3efe024f699b405d238cdcbe8f98b554fd (0 BHT)
+    Launchpad Sale:       410dfa6d3a21cd67e09c73530f625425d0a14e7384 (170000000 BHT)
+    Ecosystem:            411aee229e5f3202eba758cce9e96429f09f56ca45 (180000000 BHT)
+    Platform Rewards:     41320bcf03b21e20dd55b1219b9fe1f72bdccd2405 (350000000 BHT)
+
+
+  Token:
+  -----------------------------------------------------
+    Address: 41cca17a317333b8e610ca0333f03bfc0623d2c233
+      Owner: 416f59de1f638087c640a424d41022da79e852a75e
+     Supply: 1000000000 BHT
+        Cap: 1000000000 BHT
+
+  Manager:
+  -------------------------------------------------------
+    Address: : 416f59de1f638087c640a424d41022da79e852a75e
+
+  ==================================================================================
+```
+
+## Interaction list
+* [BountyHUB Token](https://tronsmartcontract.space/#/interact/41cca17a317333b8e610ca0333f03bfc0623d2c233)
+* [Team Timelock](https://tronsmartcontract.space/#/interact/418e67532a5a6183d4e9f87287792853d6e4cf07f4)
+* [Foundation Timelock](https://tronsmartcontract.space/#/interact/417e63e963231eb79d2bb6711b7e65cfa00c2aeff4)
+
+## Tronscan list
+* [BountyHUB Token](https://tronscan.org/#/contract/TUdCHqGkvXKnkRGafu9V6zefZd3yrZyLFu)
+* [Team Timelock](https://tronscan.org/#/contract/TNxAjSGJDXMG6otFw4PgpnVgwV2o8wKLuM)
+* [Foundation Timelock](https://tronscan.org/#/contract/TMVVqDNTn1hUHGER36BBzsCoAZhCENLwHK)
+
+## Mainnet address list
+
+| Fund                 | Address                                     |
+| ---------------------| --------------------------------------------|
+| Platform launch      | 4114cc79e54e7783dc6517d77d41e39366fa8a1306  |
+|                      | TBsBU9XvaM1hE2bHnGDSW3XtsqnuWXZHqb          |
+| Marketing & Airdrops | 41ffd77cf038fbea2fb654366afacf46c296191121  |
+|                      | TZHyTM6Yu7FffJfrj7dxtFM9Aymy3pTCYQ          |
+| Team                 | 41f86599b68421fe90649a67a90ca72064e71bf309  |
+|                      | TYccHxN5UhvY3sN2aSAdTCGYbrYDBiSfZe          |
+| Foundation           | 41caa6bb3efe024f699b405d238cdcbe8f98b554fd  |
+|                      | TUSjEWdEvCHU2UEX7LLrycZZ8oXyuFBuFV          |
+| Launchpad sale       | 410dfa6d3a21cd67e09c73530f625425d0a14e7384  |
+|                      | TBF7nW7Vs4q2fUmm73SZDSr3KaqioSQnxE          |
+| Ecosystem            | 411aee229e5f3202eba758cce9e96429f09f56ca45  |
+|                      | TCRbqyMKioeKrfhm86RFp3XT9eT1p2Qvaa          |
+| Platform rewards     | 41320bcf03b21e20dd55b1219b9fe1f72bdccd2405  |
+|                      | TEXpw8VHtQa97THLXG5y1q3D2A55hB8w8d          |
+
+| Timelock             | Address                                     |
+| ---------------------| --------------------------------------------|
+| Team                 | 418e67532a5a6183d4e9f87287792853d6e4cf07f4  |
+|                      | TNxAjSGJDXMG6otFw4PgpnVgwV2o8wKLuM          |
+| Foundation           | 417e63e963231eb79d2bb6711b7e65cfa00c2aeff4  |
+|                      | TMVVqDNTn1hUHGER36BBzsCoAZhCENLwHK          |
+
+|                      | Address                                     |
+| ---------------------| --------------------------------------------|
+| Manager              | 416f59de1f638087c640a424d41022da79e852a75e  |
+|                      | TL7yfU3c1FG8ZY6TeTf9qHLuLnaK3dyJro          |
+
+| Token                | Address                                     |
+| ---------------------| --------------------------------------------|
+| BHT                  | 41cca17a317333b8e610ca0333f03bfc0623d2c233  |
+|                      | TUdCHqGkvXKnkRGafu9V6zefZd3yrZyLFu          |
+
 ## Vesting periods
 
 ### Team
@@ -44,16 +142,20 @@ After 1 year every 6 month
 ## Vesting periods
 
 ### Team
-* _Beneficiary_ : ?
+* _Beneficiary_ : TNxAjSGJDXMG6otFw4PgpnVgwV2o8wKLuM
 * _Start time_ : ?
 * _Period_ : 180 days
 * _Count_ : 6
 
 ### Foundation
-* _Beneficiary_ : ?
+* _Beneficiary_ : TMVVqDNTn1hUHGER36BBzsCoAZhCENLwHK
 * _Start time_ : ?
 * _Period_ : 180 days
 * _Count_ : 2
+
+#### How to start
+
+To start vesting tokens, it's need to call the **startOn()** function with **start time** (Unix epoch format without milliseconds).
 
 #### How to realese
 
