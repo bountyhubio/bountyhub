@@ -61,7 +61,6 @@ contract Configurator is Ownable {
       _manager = manager;
     }
 
-
     function deploy() public onlyOwner {
       uint256 tokenCap = BountyHUBToken(_token).cap();
 

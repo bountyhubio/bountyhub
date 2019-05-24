@@ -3,8 +3,6 @@ const TokenTimelock = artifacts.require("TokenTimelock");
 
 const Configurator = artifacts.require("Configurator");
 
-// const MANAGER = "TVYZ7wSUFc22XtxQ6AfsaeQjT4i4TpRp5w";
-// const MANAGER = process.env.BOUNTYHUB_MANAGER
 const {
   BOUNTYHUB_TOKEN_NAME,
   BOUNTYHUB_TOKEN_SYMBOL,
@@ -67,7 +65,6 @@ module.exports = function(deployer) {
       result = await deployer.deploy(TokenTimelock,
         BountyHUBToken.address,
         BOUNTYHUB_TEAM_FUND,
-        BOUNTYHUB_TIMELOCK_START_DATE,
         BOUNTYHUB_TIMELOCK_PERIOD,
         BOUNTYHUB_TEAM_TIMELOCK_COUNT
       );
@@ -89,7 +86,6 @@ module.exports = function(deployer) {
       result = await deployer.deploy(TokenTimelock,
         BountyHUBToken.address,
         BOUNTYHUB_FOUNDATION_FUND,
-        BOUNTYHUB_TIMELOCK_START_DATE,
         BOUNTYHUB_TIMELOCK_PERIOD,
         BOUNTYHUB_FOUNDATION_TIMELOCK_COUNT
       );
@@ -161,7 +157,7 @@ module.exports = function(deployer) {
              Token address: ${teamTimelockTokenAddress}
              Owner address: ${teamTimelockOwnerAddress}
               Fund address: ${teamTimelockFundAddress}
-          Vesting period [ISO 8601]:
+          Vesting period [ISO 8601]: ${teamCalendar.length === 0 ? 'not started yet' : ''}
           --------------------------
           ${teamPeriods}
 
@@ -171,7 +167,7 @@ module.exports = function(deployer) {
              Token address: ${foundationTimelockTokenAddress}
              Owner address: ${foundationTimelockOwnerAddress}
               Fund address: ${foundationTimelockFundAddress}
-          Vesting period [ISO 8601]:
+          Vesting period [ISO 8601]: ${foundationCalendar.length === 0 ? 'not started yet' : ''}
           --------------------------
           ${foundationPeriods}
 

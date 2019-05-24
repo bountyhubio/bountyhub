@@ -20,23 +20,31 @@ contract TokenTimelock is Ownable {
     address private _beneficiary;
 
     // timestamp when token release is enabled
-    uint256 private _startTime;
+    uint256 private _startTime = 0;
     uint256 private _period;
     uint256 private _count;
 
     uint256[] private _calendar;
 
-    constructor (ITRC20 token, address beneficiary, uint256 startTime, uint256 period, uint256 count) public {
+    constructor (ITRC20 token, address beneficiary, uint256 period, uint256 count) public {
         // solhint-disable-next-line not-rely-on-time
-        require(startTime > block.timestamp, "TokenTimelock: release time is before current time");
         _token = token;
         _beneficiary = beneficiary;
-        _startTime = startTime;
         _period = period;
         _count = count;
+    }
 
-        for (uint256 i = count; i > 0; i--) {
-            _calendar.push(startTime + i * period);
+    /**
+     * Start the token vesting
+     * @param startTime uint256 the cliff time of the token vesting
+     */
+    function startOn(uint256 startTime) public onlyOwner {
+        // solhint-disable-next-line not-rely-on-time
+        require(startTime > block.timestamp, "TokenTimelock: release time is before current time");
+        _startTime = startTime;
+
+        for (uint256 i = _count; i > 0; i--) {
+            _calendar.push(_startTime + i * _period);
         }
     }
 
@@ -80,6 +88,7 @@ contract TokenTimelock is Ownable {
      */
     function release() public onlyOwner {
         // solhint-disable-next-line not-rely-on-time
+        require(_startTime > 0, "TokenTimelock: not started yet");
         require(block.timestamp >= _startTime, "TokenTimelock: current time is before release time");
 
         uint256 amount = _token.balanceOf(address(this));
