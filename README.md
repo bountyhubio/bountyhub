@@ -89,7 +89,7 @@ BOUNTYHUB_MANAGER="416f59de1f638087c640a424d41022da79e852a75e"
 ```
 $ git clone https://github.com/bountyhubio/bountyhub.git
 $ cd bountyhub
-$ . .env.prod && tronbox console --network mainnet
+$ . .env && tronbox console --network mainnet
 > migrate --reset
 ```
 
