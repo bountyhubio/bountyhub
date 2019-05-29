@@ -22,6 +22,77 @@
 * _Ecosystem_            : 18 %
 * _Platform Rewards_     : 35 %
 
+## Overview
+
+Contract structure:
+
+BountyHUBToken.sol - Main token contract
+TokenTimelock.sol - Token timelock contract
+Configurator.sol - Deployment contract
+
+## Mainnet Environment
+
+**Note:** [See .env file](./.env)
+```
+# BountyHUB Deployment account
+TRONBOX_FROM=""
+TRONBOX_PRIVATE_KEY=""
+
+# Token
+BOUNTYHUB_TOKEN_NAME="BountyHUB Token"
+BOUNTYHUB_TOKEN_SYMBOL="BHT"
+BOUNTYHUB_TOKEN_DECIMALS=18
+# Without decimals
+BOUNTYHUB_TOKEN_CAP=1000000000;
+
+# 2020-01-01T12:00:00.000Z
+BOUNTYHUB_TIMELOCK_START_DATE=1577880000
+
+# 180 * 86400 (180 days)
+BOUNTYHUB_TIMELOCK_PERIOD=15552000
+
+BOUNTYHUB_TEAM_TIMELOCK_COUNT=6
+BOUNTYHUB_FOUNDATION_TIMELOCK_COUNT=2
+
+
+# TBsBU9XvaM1hE2bHnGDSW3XtsqnuWXZHqb
+BOUNTYHUB_PLATFORM_LAUNCH_FUND="4114cc79e54e7783dc6517d77d41e39366fa8a1306"
+
+# TZHyTM6Yu7FffJfrj7dxtFM9Aymy3pTCYQ
+BOUNTYHUB_MARKETING_AND_AIRDROPS_FUND="41ffd77cf038fbea2fb654366afacf46c296191121"
+
+# TYccHxN5UhvY3sN2aSAdTCGYbrYDBiSfZe
+BOUNTYHUB_TEAM_FUND="41f86599b68421fe90649a67a90ca72064e71bf309"
+
+# TUSjEWdEvCHU2UEX7LLrycZZ8oXyuFBuFV
+BOUNTYHUB_FOUNDATION_FUND="41caa6bb3efe024f699b405d238cdcbe8f98b554fd"
+
+# TBF7nW7Vs4q2fUmm73SZDSr3KaqioSQnxE
+BOUNTYHUB_LAUNCHPAD_SALE_FUND="410dfa6d3a21cd67e09c73530f625425d0a14e7384"
+
+# TCRbqyMKioeKrfhm86RFp3XT9eT1p2Qvaa
+BOUNTYHUB_ECOSYSTEM_FUND="411aee229e5f3202eba758cce9e96429f09f56ca45"
+
+# TEXpw8VHtQa97THLXG5y1q3D2A55hB8w8d
+BOUNTYHUB_PLATFORM_REWARDS_FUND="41320bcf03b21e20dd55b1219b9fe1f72bdccd2405"
+
+
+# (BountyHUB Manager account) TL7yfU3c1FG8ZY6TeTf9qHLuLnaK3dyJro
+BOUNTYHUB_MANAGER="416f59de1f638087c640a424d41022da79e852a75e"
+
+```
+
+## Run
+
+**Note:** Set TRONBOX_FROM & TRONBOX_PRIVATE_KEY ([.env file](./.env))
+
+```
+$ git clone https://github.com/bountyhubio/bountyhub.git
+$ cd bountyhub
+$ . .env.prod && tronbox console --network mainnet
+> migrate --reset
+```
+
 ## Deployment
 
 ```
