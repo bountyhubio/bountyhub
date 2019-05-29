@@ -26,9 +26,9 @@
 
 Contract structure:
 
-BountyHUBToken.sol - Main token contract
-TokenTimelock.sol - Token timelock contract
-Configurator.sol - Deployment contract
+* BountyHUBToken.sol - Main token contract
+* TokenTimelock.sol - Token timelock contract
+* Configurator.sol - Deployment contract
 
 ## Mainnet Environment
 
