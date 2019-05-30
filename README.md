@@ -30,6 +30,10 @@ Contract structure:
 * TokenTimelock.sol - Token timelock contract
 * Configurator.sol - Deployment contract
 
+Flatten:
+
+* BountyHUB.sol - Flattened smart contracts from the Configurator.sol
+
 ## Mainnet Environment
 
 **Note:** [See .env file](./.env)
