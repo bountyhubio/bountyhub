@@ -1,7 +1,7 @@
 
 // File: contracts/math/SafeMath.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 /**
  * @title SafeMath
@@ -69,7 +69,7 @@ library SafeMath {
 
 // File: contracts/token/TRC20/ITRC20.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 /**
  * @title TRC20 interface
@@ -95,7 +95,7 @@ interface ITRC20 {
 
 // File: contracts/token/TRC20/TRC20.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 
 
@@ -287,7 +287,7 @@ contract TRC20 is ITRC20 {
 
 // File: contracts/access/Roles.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 /**
  * @title Roles
@@ -326,7 +326,7 @@ library Roles {
 
 // File: contracts/access/roles/MinterRole.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 
 contract MinterRole {
@@ -371,7 +371,7 @@ contract MinterRole {
 
 // File: contracts/token/TRC20/TRC20Mintable.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 
 
@@ -394,7 +394,7 @@ contract TRC20Mintable is TRC20, MinterRole {
 
 // File: contracts/token/TRC20/TRC20Capped.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 
 /**
@@ -424,7 +424,7 @@ contract TRC20Capped is TRC20Mintable {
 
 // File: contracts/token/TRC20/TRC20Detailed.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 
 /**
@@ -468,7 +468,7 @@ contract TRC20Detailed is ITRC20 {
 
 // File: contracts/ownership/Ownable.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 /**
  * @title Ownable
@@ -544,7 +544,7 @@ contract Ownable {
 
 // File: contracts/BountyHUBToken.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 
 
@@ -567,7 +567,7 @@ contract BountyHUBToken is TRC20Capped, TRC20Detailed, Ownable {
 
 // File: contracts/TokenTimelock.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 
 
@@ -682,7 +682,7 @@ contract TokenTimelock is Ownable {
 
 // File: contracts/Configurator.sol
 
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.23;
 
 
 
