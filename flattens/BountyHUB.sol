@@ -1,5 +1,5 @@
 
-// File: contracts/math/SafeMath.sol
+// File: ~contracts/math/SafeMath.sol
 
 pragma solidity ^0.4.23;
 
@@ -67,7 +67,7 @@ library SafeMath {
     }
 }
 
-// File: contracts/token/TRC20/ITRC20.sol
+// File: ~contracts/token/TRC20/ITRC20.sol
 
 pragma solidity ^0.4.23;
 
@@ -93,7 +93,7 @@ interface ITRC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// File: contracts/token/TRC20/TRC20.sol
+// File: ~contracts/token/TRC20/TRC20.sol
 
 pragma solidity ^0.4.23;
 
@@ -285,7 +285,7 @@ contract TRC20 is ITRC20 {
     }
 }
 
-// File: contracts/access/Roles.sol
+// File: ~contracts/access/Roles.sol
 
 pragma solidity ^0.4.23;
 
@@ -324,7 +324,7 @@ library Roles {
     }
 }
 
-// File: contracts/access/roles/MinterRole.sol
+// File: ~contracts/access/roles/MinterRole.sol
 
 pragma solidity ^0.4.23;
 
@@ -369,7 +369,7 @@ contract MinterRole {
     }
 }
 
-// File: contracts/token/TRC20/TRC20Mintable.sol
+// File: ~contracts/token/TRC20/TRC20Mintable.sol
 
 pragma solidity ^0.4.23;
 
@@ -392,7 +392,7 @@ contract TRC20Mintable is TRC20, MinterRole {
     }
 }
 
-// File: contracts/token/TRC20/TRC20Capped.sol
+// File: ~contracts/token/TRC20/TRC20Capped.sol
 
 pragma solidity ^0.4.23;
 
@@ -422,7 +422,7 @@ contract TRC20Capped is TRC20Mintable {
     }
 }
 
-// File: contracts/token/TRC20/TRC20Detailed.sol
+// File: ~contracts/token/TRC20/TRC20Detailed.sol
 
 pragma solidity ^0.4.23;
 
@@ -466,7 +466,7 @@ contract TRC20Detailed is ITRC20 {
     }
 }
 
-// File: contracts/ownership/Ownable.sol
+// File: ~contracts/ownership/Ownable.sol
 
 pragma solidity ^0.4.23;
 
@@ -542,12 +542,16 @@ contract Ownable {
     }
 }
 
-// File: contracts/BountyHUBToken.sol
+// File: ~contracts/BountyHUBToken.sol
 
 pragma solidity ^0.4.23;
 
 
 
+
+interface tokenRecipient {
+    function receiveApproval(address _from, uint256 _value, bytes _extraData) external;
+}
 
 /**
  * @title SimpleToken
@@ -556,16 +560,21 @@ pragma solidity ^0.4.23;
  * `TRC20` functions.
  */
 contract BountyHUBToken is TRC20Capped, TRC20Detailed, Ownable {
-    /**
-     * @dev Constructor that gives msg.sender all of existing tokens.
-     */
-    constructor (string name, string symbol, uint8 decimals, uint256 cap) public
-        TRC20Detailed(name, symbol, decimals)
-        TRC20Capped(cap * (10 ** uint256(decimals))) {
-    }
+  string constant private NAME = "BountyHUBToken";
+  string constant private SYMBOL = "BHT";
+  uint8 constant private DECIMALS = 18;
+  uint256 constant private CAP = 1000000000 * (10 ** uint256(DECIMALS));
+  
+  /**
+   * @dev Constructor that gives msg.sender all of existing tokens.
+   */
+  constructor () public
+      TRC20Detailed(NAME, SYMBOL, DECIMALS)
+      TRC20Capped(CAP) {
+  }
 }
 
-// File: contracts/TokenTimelock.sol
+// File: ~contracts/TokenTimelock.sol
 
 pragma solidity ^0.4.23;
 
@@ -680,7 +689,7 @@ contract TokenTimelock is Ownable {
     }
 }
 
-// File: contracts/Configurator.sol
+// File: ~contracts/Configurator.sol
 
 pragma solidity ^0.4.23;
 

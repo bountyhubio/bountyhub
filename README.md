@@ -5,7 +5,7 @@
 ## Ditails
 
 * _Standard_                                                                            : [TRC20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
-* _[Name](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#name)_            : BountyHUB Token
+* _[Name](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#name)_            : BountyHUBToken
 * _[Ticker](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#symbol)_        : BHT
 * _[Decimals](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#decimals)_    : 18
 * _Emission_                                                                            : Mintable
@@ -43,7 +43,7 @@ TRONBOX_FROM=""
 TRONBOX_PRIVATE_KEY=""
 
 # Token
-BOUNTYHUB_TOKEN_NAME="BountyHUB Token"
+BOUNTYHUB_TOKEN_NAME="BountyHUBToken"
 BOUNTYHUB_TOKEN_SYMBOL="BHT"
 BOUNTYHUB_TOKEN_DECIMALS=18
 # Without decimals
@@ -93,6 +93,7 @@ BOUNTYHUB_MANAGER="416f59de1f638087c640a424d41022da79e852a75e"
 ```
 $ git clone https://github.com/bountyhubio/bountyhub.git
 $ cd bountyhub
+# Populate TRONBOX_FROM & TRONBOX_PRIVATE_KEY for .env
 $ . .env && tronbox console --network mainnet
 > migrate --reset
 ```
@@ -100,59 +101,59 @@ $ . .env && tronbox console --network mainnet
 ## Deployment
 
 ```
-  ==================================================================================
-  Deployment summary:
-  ==================================================================================
+==================================================================================
+Deployment summary:
+==================================================================================
 
-  Team:
-  --------------------------------------------------------------
-    Timelock address: 418e67532a5a6183d4e9f87287792853d6e4cf07f4 (100000000 BHT)
-       Token address: 41cca17a317333b8e610ca0333f03bfc0623d2c233
-       Owner address: 416f59de1f638087c640a424d41022da79e852a75e
-        Fund address: 41f86599b68421fe90649a67a90ca72064e71bf309
-    Vesting period [ISO 8601]: not started yet
-    --------------------------
-
-
-  Foundation:
-  --------------------------------------------------------------
-    Timelock address: 417e63e963231eb79d2bb6711b7e65cfa00c2aeff4 (150000000 BHT)
-       Token address: 41cca17a317333b8e610ca0333f03bfc0623d2c233
-       Owner address: 416f59de1f638087c640a424d41022da79e852a75e
-        Fund address: 41caa6bb3efe024f699b405d238cdcbe8f98b554fd
-    Vesting period [ISO 8601]: not started yet
-    --------------------------
+Team:
+--------------------------------------------------------------
+  Timelock address: 4193fc857f334e4073489c836798c202538209f943 (100000000 BHT)
+     Token address: 414106bba560eda894a51c4c9e804642aeb1e5524d
+     Owner address: 416f59de1f638087c640a424d41022da79e852a75e
+      Fund address: 41f86599b68421fe90649a67a90ca72064e71bf309
+  Vesting period [ISO 8601]: not started yet
+  --------------------------
 
 
-  Funds/Pools:
-  ------------------------------------------------------------------
-    Platform Launch:      4114cc79e54e7783dc6517d77d41e39366fa8a1306 (10000000 BHT)
-    Marketing & Airdrops: 41ffd77cf038fbea2fb654366afacf46c296191121 (40000000 BHT)
-    Team:                 41f86599b68421fe90649a67a90ca72064e71bf309 (0 BHT)
-    Foundation:           41caa6bb3efe024f699b405d238cdcbe8f98b554fd (0 BHT)
-    Launchpad Sale:       410dfa6d3a21cd67e09c73530f625425d0a14e7384 (170000000 BHT)
-    Ecosystem:            411aee229e5f3202eba758cce9e96429f09f56ca45 (180000000 BHT)
-    Platform Rewards:     41320bcf03b21e20dd55b1219b9fe1f72bdccd2405 (350000000 BHT)
+Foundation:
+--------------------------------------------------------------
+  Timelock address: 4192ead51de30f28592fe0132d8cabf88121e585ae (150000000 BHT)
+     Token address: 414106bba560eda894a51c4c9e804642aeb1e5524d
+     Owner address: 416f59de1f638087c640a424d41022da79e852a75e
+      Fund address: 41caa6bb3efe024f699b405d238cdcbe8f98b554fd
+  Vesting period [ISO 8601]: not started yet
+  --------------------------
 
 
-  Token:
-  -----------------------------------------------------
-    Address: 41cca17a317333b8e610ca0333f03bfc0623d2c233
-      Owner: 416f59de1f638087c640a424d41022da79e852a75e
-     Supply: 1000000000 BHT
-        Cap: 1000000000 BHT
+Funds/Pools:
+------------------------------------------------------------------
+  Platform Launch:      4114cc79e54e7783dc6517d77d41e39366fa8a1306 (10000000 BHT)
+  Marketing & Airdrops: 41ffd77cf038fbea2fb654366afacf46c296191121 (40000000 BHT)
+  Team:                 41f86599b68421fe90649a67a90ca72064e71bf309 (0 BHT)
+  Foundation:           41caa6bb3efe024f699b405d238cdcbe8f98b554fd (0 BHT)
+  Launchpad Sale:       410dfa6d3a21cd67e09c73530f625425d0a14e7384 (170000000 BHT)
+  Ecosystem:            411aee229e5f3202eba758cce9e96429f09f56ca45 (180000000 BHT)
+  Platform Rewards:     41320bcf03b21e20dd55b1219b9fe1f72bdccd2405 (350000000 BHT)
 
-  Manager:
-  -------------------------------------------------------
-    Address: : 416f59de1f638087c640a424d41022da79e852a75e
 
-  ==================================================================================
+Token:
+-----------------------------------------------------
+  Address: 414106bba560eda894a51c4c9e804642aeb1e5524d
+    Owner: 416f59de1f638087c640a424d41022da79e852a75e
+   Supply: 1000000000 BHT
+      Cap: 1000000000 BHT
+
+Manager:
+-------------------------------------------------------
+  Address: : 416f59de1f638087c640a424d41022da79e852a75e
+
+==================================================================================
 ```
 
 ## Interaction list
-* [BountyHUB Token](https://tronsmartcontract.space/#/interact/41cca17a317333b8e610ca0333f03bfc0623d2c233)
-* [Team Timelock](https://tronsmartcontract.space/#/interact/418e67532a5a6183d4e9f87287792853d6e4cf07f4)
-* [Foundation Timelock](https://tronsmartcontract.space/#/interact/417e63e963231eb79d2bb6711b7e65cfa00c2aeff4)
+* [BountyHUB Token](https://tronsmartcontract.space/#/interact/TFu2zLw5TR5mHs7sa9ECSrm7ZWwQvQ5kMS)
+* [Team Timelock](https://tronsmartcontract.space/#/interact/TPTgqktexNSVe5Y6DZz4zhjz8pd3oSRAcM)
+* [Foundation Timelock](https://tronsmartcontract.space/#/interact/TPN2yWjgTRhzizRLqRtwf1dtPqKMCV8WnB)
 
 ## Tronscan list
 * [BountyHUB Token](https://tronscan.org/#/contract/TUdCHqGkvXKnkRGafu9V6zefZd3yrZyLFu)
@@ -180,10 +181,10 @@ $ . .env && tronbox console --network mainnet
 
 | Timelock             | Address                                     |
 | ---------------------| --------------------------------------------|
-| Team                 | 418e67532a5a6183d4e9f87287792853d6e4cf07f4  |
-|                      | TNxAjSGJDXMG6otFw4PgpnVgwV2o8wKLuM          |
-| Foundation           | 417e63e963231eb79d2bb6711b7e65cfa00c2aeff4  |
-|                      | TMVVqDNTn1hUHGER36BBzsCoAZhCENLwHK          |
+| Team                 | 4193fc857f334e4073489c836798c202538209f943  |
+|                      | TPTgqktexNSVe5Y6DZz4zhjz8pd3oSRAcM          |
+| Foundation           | 4192ead51de30f28592fe0132d8cabf88121e585ae  |
+|                      | TPN2yWjgTRhzizRLqRtwf1dtPqKMCV8WnB          |
 
 |                      | Address                                     |
 | ---------------------| --------------------------------------------|
@@ -192,8 +193,8 @@ $ . .env && tronbox console --network mainnet
 
 | Token                | Address                                     |
 | ---------------------| --------------------------------------------|
-| BHT                  | 41cca17a317333b8e610ca0333f03bfc0623d2c233  |
-|                      | TUdCHqGkvXKnkRGafu9V6zefZd3yrZyLFu          |
+| BHT                  | 414106bba560eda894a51c4c9e804642aeb1e5524d  |
+|                      | TFu2zLw5TR5mHs7sa9ECSrm7ZWwQvQ5kMS          |
 
 ## Vesting periods
 
@@ -217,13 +218,13 @@ After 1 year every 6 month
 ## Vesting periods
 
 ### Team
-* _Beneficiary_ : TNxAjSGJDXMG6otFw4PgpnVgwV2o8wKLuM
+* _Beneficiary_ : TYccHxN5UhvY3sN2aSAdTCGYbrYDBiSfZe
 * _Start time_ : ?
 * _Period_ : 180 days
 * _Count_ : 6
 
 ### Foundation
-* _Beneficiary_ : TMVVqDNTn1hUHGER36BBzsCoAZhCENLwHK
+* _Beneficiary_ : TUSjEWdEvCHU2UEX7LLrycZZ8oXyuFBuFV
 * _Start time_ : ?
 * _Period_ : 180 days
 * _Count_ : 2
