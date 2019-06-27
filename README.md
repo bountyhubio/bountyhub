@@ -156,9 +156,9 @@ Manager:
 * [Foundation Timelock](https://tronsmartcontract.space/#/interact/TPN2yWjgTRhzizRLqRtwf1dtPqKMCV8WnB)
 
 ## Tronscan list
-* [BountyHUB Token](https://tronscan.org/#/contract/TUdCHqGkvXKnkRGafu9V6zefZd3yrZyLFu)
-* [Team Timelock](https://tronscan.org/#/contract/TNxAjSGJDXMG6otFw4PgpnVgwV2o8wKLuM)
-* [Foundation Timelock](https://tronscan.org/#/contract/TMVVqDNTn1hUHGER36BBzsCoAZhCENLwHK)
+* [BountyHUB Token](https://tronscan.org/#/contract/TFu2zLw5TR5mHs7sa9ECSrm7ZWwQvQ5kMS)
+* [Team Timelock](https://tronscan.org/#/contract/TPTgqktexNSVe5Y6DZz4zhjz8pd3oSRAcM)
+* [Foundation Timelock](https://tronscan.org/#/contract/TPN2yWjgTRhzizRLqRtwf1dtPqKMCV8WnB)
 
 ## Mainnet address list
 
